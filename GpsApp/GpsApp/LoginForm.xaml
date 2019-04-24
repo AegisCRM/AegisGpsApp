@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GpsApp.LoginForm"  BackgroundColor="White">
+    <ContentPage.Content>
+        
+        <StackLayout VerticalOptions="Center">
+            <Entry x:Name="txtUserName" Placeholder="Username" />
+            <Entry x:Name="txtPassword" IsPassword="True" Placeholder="Password" />
+            <Button Text="Login" Clicked="Button_Clicked" />
+            <Label x:Name="lblMessage" VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <ActivityIndicator Color="Red" IsVisible="{Binding IsBusy}"
+                           IsRunning="{Binding IsBusy}" IsEnabled="{Binding IsBusy}" />
+
+            <StackLayout VerticalOptions="EndAndExpand">
+                <!-- Place new controls here -->
+                <Image x:Name="imgLogo" Source="logo.jpg" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
